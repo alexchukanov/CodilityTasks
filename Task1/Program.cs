@@ -24,11 +24,20 @@ https://app.codility.com/c/feedback/demo7JFGKX-DQJ/
 
 using System;
 using System.Linq;
-// you can also use other imports, for example:
-// using System.Collections.Generic;
 
-// you can write to stdout for debugging purposes, e.g.
-// Console.WriteLine("this is a debug message");
+int[][] numberArr = new int[3][];
+
+numberArr[0] = new int[] { 1, 3, 6, 4, 1, 2 };
+numberArr[1] = new int[] { 1, 2, 3 };
+numberArr[2] = new int[] { -1, -3 };
+
+Solution sl = new Solution();
+
+foreach (int[] nArr in numberArr)
+{
+    Console.WriteLine(string.Join(" ", nArr));
+    Console.WriteLine($"Smallest positive integer = {sl.solution(nArr)}");
+}
 
 class Solution
 {
